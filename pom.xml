@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>closure-library</artifactId>
-    <version>20150412-848686a</version>
+    <version>0-SNAPSHOT</version>
     <name>closure-library</name>
     <description>WebJar for Google Closure Library</description>
     <url>http://webjars.org</url>
@@ -47,7 +47,7 @@
         <url>http://github.com/webjars/closure-library</url>
         <connection>scm:git:https://github.com/webjars/closure-library.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/closure-library.git</developerConnection>
-        <tag>closure-library-20150412-848686a</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
