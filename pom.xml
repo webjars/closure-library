@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>closure-library</artifactId>
-    <version>20150412-848686a-SNAPSHOT</version>
+    <version>20150412-848686a</version>
     <name>closure-library</name>
     <description>WebJar for Google Closure Library</description>
     <url>http://webjars.org</url>
@@ -47,7 +47,7 @@
         <url>http://github.com/webjars/closure-library</url>
         <connection>scm:git:https://github.com/webjars/closure-library.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/closure-library.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>closure-library-20150412-848686a</tag>
     </scm>
 
     <build>
@@ -62,13 +62,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/closure"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/closure" />
                                 </move>
                             </target>
                         </configuration>
