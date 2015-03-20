@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>closure-library</artifactId>
-    <version>20150412-848686a</version>
+    <version>20150412-848686a-SNAPSHOT</version>
     <name>closure-library</name>
     <description>WebJar for Google Closure Library</description>
     <url>http://webjars.org</url>
@@ -23,12 +23,6 @@
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
-                "paths": {
-                    "WEBJAR_ID": "MAIN_JS"
-                },
-                "shim": {
-                    "WEBJAR_ID": ["DEP_ID"]
-                }
             }
         </requirejs>
     </properties>
@@ -74,7 +68,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
                                 <echo message="moving resources"/>
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/closure"/>
                                 </move>
                             </target>
                         </configuration>
